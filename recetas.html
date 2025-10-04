@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Recetas</title>
+    <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,56 +20,58 @@
         <!-- Sección de listado de recetas -->
         <section class="recetas-listado">
             <h2>Listado de Recetas</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Tipo</th>
-                        <th>Tiempo</th>
-                        <th>Enlace</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Nombre">Ensaladilla Rusa</td>
-                        <td data-label="Tipo">Entrante</td>
-                        <td data-label="Tiempo">120 min</td>
-                        <td data-label="Enlace"><a href="detalle_ensaladilla.html">Ver</a></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Nombre">Gazpacho</td>
-                        <td data-label="Tipo">Entrante</td>
-                        <td data-label="Tiempo">40 min</td>
-                        <td data-label="Enlace"><a href="detalle_gazpacho.html">Ver</a></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Nombre">Tortilla de Patatas</td>
-                        <td data-label="Tipo">Plato principal</td>
-                        <td data-label="Tiempo">30 min</td>
-                        <td data-label="Enlace"><a href="detalle_tortilla.html">Ver</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td data-label="Nombre">Quiche Lorraine</td>
-                        <td data-label="Tipo">Plato principal</td>
-                        <td data-label="Tiempo">60 min</td>
-                        <td data-label="Enlace"><a href="detalle_quiche.html">Ver</a></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Nombre">Tarta de Queso</td>
-                        <td data-label="Tipo">Postre</td>
-                        <td data-label="Tiempo">90 min</td>
-                        <td data-label="Enlace"><a href="detalle_tarta.html">Ver</a></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Nombre">Crepe</td>
-                        <td data-label="Tipo">Postre</td>
-                        <td data-label="Tiempo">75 min</td>
-                        <td data-label="Enlace"><a href="detalle_crepe.html">Ver</a></td>
-                    </tr>
-                </tbody>
-            </table>
+            </br>
+            <ul class="lista-recetas">
+                <li>
+                    <div class="info">
+                        <h3>Ensaladilla Rusa</h3>
+                        <span>Entrante · 120 min</span>
+                    </div>
+                    <a href="detalle_ensaladilla.html" class="btn">Ver</a>
+                </li>
+
+                <li>
+                    <div class="info">
+                        <h3>Gazpacho</h3>
+                        <span>Entrante · 40 min</span>
+                    </div>
+                    <a href="detalle_gazpacho.html" class="btn">Ver</a>
+                </li>
+
+                <li>
+                    <div class="info">
+                        <h3>Tortilla de Patatas</h3>
+                        <span>Plato principal · 30 min</span>
+                    </div>
+                    <a href="detalle_tortilla.html" class="btn">Ver</a>
+                </li>
+
+                <li>
+                    <div class="info">
+                        <h3>Quiche Lorraine</h3>
+                        <span>Plato principal · 60 min</span>
+                    </div>
+                    <a href="detalle_quiche.html" class="btn">Ver</a>
+                </li>
+
+                <li>
+                    <div class="info">
+                        <h3>Tarta de Queso</h3>
+                        <span>Postre · 90 min</span>
+                    </div>
+                    <a href="detalle_tarta.html" class="btn">Ver</a>
+                </li>
+
+                <li>
+                    <div class="info">
+                        <h3>Crepe</h3>
+                        <span>Postre · 75 min</span>
+                    </div>
+                    <a href="detalle_crepe.html" class="btn">Ver</a>
+                </li>
+            </ul>
         </section>
+
     </main>
 
     <!-- Footer igual que índice -->
