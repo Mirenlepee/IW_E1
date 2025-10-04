@@ -15,12 +15,12 @@ body {
 /* ==================== HERO ==================== */
 header.hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 100vh;
     background: url("img/vista-superior-de-patatas-fritas-dentro-de-la-sarten-con-verduras-sobre-el-fondo-oscuro.jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 80px 20px 40px;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ header.hero::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.5);
     z-index: 1;
 }
 
@@ -42,18 +42,24 @@ header.hero::before {
     z-index: 2;
     max-width: 90%;
     color: #fff8dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .hero-content h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
     color: #fef9e7;
+    line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1rem;
-    margin-bottom: 25px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
     color: #ffe4b5;
+    line-height: 1.4;
 }
 
 /* ==================== BOTONES ==================== */
@@ -88,7 +94,7 @@ header.hero::before {
 /* ==================== NAVEGACIÓN MÓVIL ==================== */
 .main-nav {
     position: absolute;
-    top: 10px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 3;
@@ -96,8 +102,9 @@ header.hero::before {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    padding: 10px;
-    background: rgba(0,0,0,0.3);
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
 }
 
 .main-nav a {
@@ -107,11 +114,12 @@ header.hero::before {
     font-size: 0.9rem;
     padding: 8px 15px;
     border-radius: 20px;
-    background: rgba(211, 84, 0, 0.7);
+    background: transparent;
     transition: all 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a.active {
     background: #d35400;
     transform: scale(1.05);
 }
