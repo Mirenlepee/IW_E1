@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero hero-pequeño">
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="recetas.html">Recetas</a>
+            <a href="nueva_receta.html">Nueva Receta</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Formulario de contacto -->
+        <section class="form-contacto">
+            <h2>Contacto</h2>
+            <p>Si tienes dudas o sugerencias, escríbenos:</p>
+            <form>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Gestor de Recetas</p>
+    </footer>
+</body>
+</html>
