@@ -15,7 +15,7 @@ body {
 /* =================== HERO =================== */
 header.hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 60vh;
     background: url("img/vista-superior-de-patatas-fritas-dentro-de-la-sarten-con-verduras-sobre-el-fondo-oscuro.jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
@@ -204,16 +204,6 @@ header.hero.hero-pequeño {
     color: #333;
     font-size: 1.8rem;
     margin-bottom: 20px;
-}
-
-#buscador {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin: 1rem 0 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
 }
 
 .lista-recetas {
@@ -504,57 +494,19 @@ footer {
 
 
 /* ==================== AJUSTE PANTALLAS ==================== */
-@media (min-width: 600px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .lista-recetas li {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .lista-recetas .info {
-        margin-bottom: 0;
-    }
-
-    .btn {
-        width: auto;
-    }
-
-    .categorias {
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    .form-receta button,
-    .form-contacto button {
-        width: auto;
-        padding: 12px 40px;
-    }
-}
-
-/* ==================== MEDIA QUERIES - DESKTOP ==================== */
 @media (min-width: 1024px) {
     header.hero {
         min-height: 100vh;
-        justify-content: flex-end;
-        padding-right: 13%;
+        justify-content: flex-start;
+        padding-left: 8%;
+        padding-right: 0;
         text-align: left;
     }
 
     .hero-content {
         max-width: 400px;
-        margin-top: -3cm;
+        margin-top: -2cm;
+        align-items: flex-start;
     }
 
     .hero-content h1 {
@@ -563,6 +515,10 @@ footer {
 
     .hero-content p {
         font-size: 1.2rem;
+    }
+    
+    .hero-content .btn {
+        margin-left: 0;
     }
 
     .main-nav {
@@ -612,5 +568,19 @@ footer {
     .destacadas h2,
     .sobre-nosotros h2 {
         font-size: 2rem;
+    }
+
+    .lista-recetas li {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lista-recetas .info {
+        margin-bottom: 0;
+    }
+
+    .lista-recetas .btn {
+        align-self: auto;
     }
 }
