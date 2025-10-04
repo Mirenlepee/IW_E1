@@ -14,22 +14,27 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
     background: #f5f5f5;
-    min-width: 1440px;  
-    overflow-x: auto;
-    -webkit-text-size-adjust: 100%;
 }
 
 
 header.hero {
     position: relative;
-    height: 100vh;
-    min-height: 700px;
+    height: 60vh; /* Más compacto en móvil vertical */
+    min-height: 500px;
     background: url("img/vista-superior-de-patatas-fritas-dentro-de-la-sarten-con-verduras-sobre-el-fondo-oscuro.jpg") center/cover no-repeat;
     display: flex;
-    justify-content: flex-end;   /* mueve a la derecha */
-    align-items: center;         /* centra verticalmente */
-    padding-right: 13%;          /* ajusta posición sobre la libreta */
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 8%;
     text-align: left;
+}
+
+/* En horizontal (landscape) y desktop, altura completa */
+@media (min-width: 769px), (orientation: landscape) {
+    header.hero {
+        height: 100vh;
+        padding-right: 13%;
+    }
 }
 
 /* Overlay semitransparente para mejorar lectura */
@@ -48,30 +53,44 @@ header.hero::before {
     position: relative;
     z-index: 2;
     max-width: 400px;
+    width: 100%;
     color: #fff8dc;
-    margin-top: -3cm; /* lo sube 2cm */
 }
 
-
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem; /* Tamaño medio en móvil vertical */
+    margin-bottom: 15px;
     color: #fef9e7;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
     color: #ffe4b5;
+}
+
+/* En horizontal y desktop, tamaños completos */
+@media (min-width: 769px), (orientation: landscape) {
+    .hero-content {
+        margin-top: -80px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
 }
 
 /* ==================== BOTONES ==================== */
 .btn {
     display: inline-block;
-    background-color: #d35400; /* naranja oscuro */
+    background-color: #d35400;
     color: white;
     padding: 12px 25px;
-    margin: 0 10px 10px 0;
+    margin: 5px; /* Margen uniforme */
     text-decoration: none;
     font-size: 1rem;
     border-radius: 25px;
@@ -95,23 +114,33 @@ header.hero::before {
 /* ==================== NAVEGACIÓN ==================== */
 .main-nav {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .main-nav a {
-    margin: 0 10px;
     color: #fff8dc;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1rem; /* Tamaño normal en móvil vertical */
+    white-space: nowrap;
 }
 
-.main-nav a:hover {
-    text-decoration: underline;
+/* En horizontal y desktop, mantiene igual */
+@media (min-width: 769px), (orientation: landscape) {
+    .main-nav {
+        top: 20px;
+        right: 20px;
+    }
+    
+    .main-nav a {
+        margin: 0 10px;
+    }
 }
-
 /* ==================== SECCIONES ==================== */
 section {
     padding: 60px 20px;
@@ -127,10 +156,18 @@ section {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr; /* Una columna en móvil vertical */
     gap: 20px;
     max-width: 1200px;
     margin: auto;
+    padding: 0 20px;
+}
+
+/* En horizontal o tablets y arriba, 3 columnas */
+@media (min-width: 769px), (orientation: landscape) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .card {
@@ -149,8 +186,14 @@ section {
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 220px; /* Más grande en móvil vertical */
     object-fit: cover;
+}
+
+@media (min-width: 769px), (orientation: landscape) {
+    .card img {
+        height: 180px;
+    }
 }
 
 .card-text {
