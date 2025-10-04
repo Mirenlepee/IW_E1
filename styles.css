@@ -5,19 +5,25 @@
     box-sizing: border-box;
 }
 
+html {
+    min-width: 1440px;
+    overflow-x: auto;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
     background: #f5f5f5;
-    
-    min-width: 1200px;  /* ← AÑADIR ESTA LÍNEA */
-    overflow-x: auto;    /* ← AÑADIR ESTA LÍNEA */
+    min-width: 1440px;  
+    overflow-x: auto;
+    -webkit-text-size-adjust: 100%;
 }
 
 
 header.hero {
     position: relative;
     height: 100vh;
+    min-height: 700px;
     background: url("img/vista-superior-de-patatas-fritas-dentro-de-la-sarten-con-verduras-sobre-el-fondo-oscuro.jpg") center/cover no-repeat;
     display: flex;
     justify-content: flex-end;   /* mueve a la derecha */
