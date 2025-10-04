@@ -19,17 +19,17 @@ body {
 
 header.hero {
     position: relative;
-    height: 85vh; /* Más compacto en móvil vertical */
-    min-height: 400px; /* Altura mínima más baja */
+    height: 70vh; /* Más compacto */
+    min-height: 450px;
     background: url("img/vista-superior-de-patatas-fritas-dentro-de-la-sarten-con-verduras-sobre-el-fondo-oscuro.jpg") center/cover no-repeat;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 8%;
     text-align: left;
 }
 
-/* En horizontal y desktop, altura completa */
+/* En horizontal y desktop */
 @media (min-width: 769px), (orientation: landscape) {
     header.hero {
         height: 100vh;
@@ -167,9 +167,9 @@ section {
 
 .destacadas h2 {
     text-align: center;
-    font-size: 1.6rem; /* Más pequeño en móvil */
+    font-size: 1.8rem; /* Más grande */
     color: #d35400;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 @media (min-width: 769px), (orientation: landscape) {
@@ -190,7 +190,7 @@ section {
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 250px; /* Más grande para ver mejor las recetas */
     object-fit: cover;
 }
 
@@ -235,10 +235,22 @@ section {
 .card-text h3 {
     margin-bottom: 10px;
     color: #333;
+    font-size: 1.3rem; /* Más grande */
 }
 
 .card-text p {
     color: #777;
+    font-size: 1rem; /* Más grande */
+}
+
+@media (min-width: 769px), (orientation: landscape) {
+    .card-text h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-text p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Sobre nosotros */
