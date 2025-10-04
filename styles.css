@@ -15,7 +15,7 @@ body {
 /* =================== HERO =================== */
 header.hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 100vh;
     background: url("img/vista-superior-de-patatas-fritas-dentro-de-la-sarten-con-verduras-sobre-el-fondo-oscuro.jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
