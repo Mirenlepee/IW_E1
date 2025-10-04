@@ -497,16 +497,14 @@ footer {
 @media (min-width: 1024px) {
     header.hero {
         min-height: 100vh;
-        justify-content: flex-start;
-        padding-left: 8%;
-        padding-right: 0;
+        justify-content: flex-end;
+        padding-right: 13%;
         text-align: left;
     }
 
     .hero-content {
         max-width: 400px;
-        margin-top: -2cm;
-        align-items: flex-start;
+        margin-top: -3cm;
     }
 
     .hero-content h1 {
